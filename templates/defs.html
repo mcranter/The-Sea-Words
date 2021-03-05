@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Sea Words</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+
+    <h2> I'm extedning the base template</h2>
         {% for task in tasks %}
             {{ task.category_name }}<br>
             {{ task.task_name }}<br>
             {{ task.task_description }}<br>
         {% endfor %}
-</body>
-</html>
+
+        {% endblock %}

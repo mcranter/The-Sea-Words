@@ -5,14 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="css/text">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
-    {% endblock 
-        %}
+    {% endblock %}
     <title>The Sea Words</title>
 </head>
 <body>
+
+    <header>
+        <nav class="nav-extended text-shadow indigo accent-4">
+            <div class="nav-wrapper">
+    <!--navbar, top-->
+            <a href="{{ url_for('get_defs') }}" class="brand-logo">The Sea Words</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="{{ url_for('get_defs') }}">Home</a></li>
+                <li><a href="#">Browse</a></li>
+                <li><a href="#">Add Word</a></li>
+                <li><a href="#">Log In</a></li>
+                <li><a href="#">Log Out</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
+            </ul>
+            </div>
+        </nav>
+    <!--navbar, mobile-->
+        <ul class="sidenav" id="mobile-demo">
+            <li><h4 class="light-blue-text text-darken-4">The Sea Words</h4></li>
+            <li><a href="{{ url_for('get_defs') }}">Home</a></li>
+            <li><a href="#">Browse</a></li>
+            <li><a href="#">Add Word</a></li>
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Log Out</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
+        </ul>
+    </header>
+
     {% block content %}
     {% endblock %}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" 

@@ -44,7 +44,7 @@ def register():
 
         # put the new user into session cookie
         session["user"] = request.form.get("username").lower()
-        flash("Registration Successful!")
+        flash("Registration Successful - Welcome Aboard!")
     return render_template("register.html")
 
 
@@ -58,18 +58,18 @@ def login():
         if existing_user:
             # ensure pswd matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
+                    existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome, {}".format(request.form.get("username")))
             else:
                 # passwords don't match
                 flash("Incorrect Username and/or Password")
-                return redirect(url_for('login'))
+                return redirect(url_for("login"))
 
         else:
             # username not found in db
             flash("Incorrect Username and/or Password")
-            return redirect(url_for('login'))
+            return redirect(url_for("login"))
 
     return render_template("login.html")
 

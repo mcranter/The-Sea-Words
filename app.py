@@ -22,7 +22,7 @@ mongo = PyMongo(app)
 @app.route("/get_defs")
 def get_defs():
     tasks = mongo.db.tasks.find()
-    return render_template("defs.html", tasks=tasks)
+    return render_template("home.html", tasks=tasks)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -96,6 +96,11 @@ def logout():
     flash("You're logged out, ye lubber")
     session.clear()
     return redirect(url_for("login"))
+
+
+@app.route("/add_word")
+def add_word():
+    return render_template("add_word.html")
 
 
 if __name__ == "__main__":

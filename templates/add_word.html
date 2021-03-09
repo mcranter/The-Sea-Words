@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="light-blue-text text-darken-4 center-align">Add a Word</h3>
+    <div class="row">
+        <form class="col s12" method="POST" action="">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input placeholder="Word" id="word-title" type="text" class="validate">
+                    <label for="first_name">Word</label>
+                </div>
+            </div>
+        </form>
+    </div>    
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <label for="textarea1">Add definition here</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea2" class="materialize-textarea"></textarea>
+                        <label for="textarea2">Use it in a sentence.</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    
+        
+
+{% endblock %}

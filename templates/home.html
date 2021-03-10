@@ -1,20 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 
+        {% for task in tasks %}
         <div class="card">
             <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="images/office.jpg">
             </div>
             <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Word 
-                    <i class="material-icons right">more_vert</i></span>
-                <p><a href="#">This is a link</a></p>
+                <span class="card-title activator grey-text text-darken-4">{{ task.task_word }}
+                    <i class="material-icons right"></i></span>
+                <p><em>added by: {{ task.created_by }}</em></p>
             </div>
             <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Definition
+                <span class="card-title grey-text text-darken-4">{{ task.task_name }}
                     <i class="material-icons right">close</i></span>
-                <p>Definition goes here</p>
+                <p>{{ task.task_description }}</p>
             </div>
         </div>
-
-        {% endblock %}
+        {% endfor %}
+        
+{% endblock %}

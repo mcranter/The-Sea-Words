@@ -2,37 +2,43 @@
 {% block content %}
 
     <h3 class="light-blue-text text-darken-4 center-align">Add a Word</h3>
+
     <div class="row">
-        <form class="col s12" method="POST" action="">
+        <form class="col s12" method="POST" action="{{ url_for('add_word') }}">
+            <!--word input-->
             <div class="row">
                 <div class="input-field col s12">
-                    <input placeholder="Word" id="task_word" type="text" class="validate" maxlength="25" required>
-                    <label for="task_word">Word</label>
+                    <input placeholder="Word" name="task_word" id="task_word" type="text" 
+                        class="validate" minlenth="2" maxlength="25" required>
+                    <label for="task_word">Word <i class="fas fa-feather"></i></label>
+                </div>
+            </div>
+        
+            <!--definition input-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="task_name" name="task_name" class="materialize-textarea" 
+                        maxlength="180" minlenth="10" required></textarea>
+                    <label for="task_name" >Add definition here</label>
+                </div>  
+            </div>
+
+            <!--example input-->
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="task_description" name="task_description" class="materialize-textarea" 
+                        minlenth="10" maxlength="180" required></textarea>
+                    <label for="task_description">Use it in a sentence</label>
+                </div>               
+            </div>
+
+            <div class="row">
+                <div class="col s12 center-align">
+                    <!--submit button -->
+                    <button type="submit" id ="sub-btn" class="btn-large indigo accent-4 text-shadow">Submit Word</button>
                 </div>
             </div>
         </form>
     </div>    
-    <div class="row">
-        <form class="col s12">
-            <div class="row">
-                <div class="input-field col s12">
-                    <textarea id="task_name" class="materialize-textarea" maxlength="180" required></textarea>
-                    <label for="task_name">Add definition here</label>
-                </div>
-            </div>
-        </form>
-    </div>
-    <div class="row">
-        <form class="col s12">
-            <div class="row">
-                <div class="input-field col s12">
-                    <textarea id="task_description" class="materialize-textarea" maxlength="180" required></textarea>
-                    <label for="task_description">Use it in a sentence.</label>
-                </div>
-            </div>
-        </form>
-    </div>
-    
-        
 
 {% endblock %}

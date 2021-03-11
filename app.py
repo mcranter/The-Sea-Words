@@ -139,6 +139,12 @@ def delete_word(task_id):
     return redirect(url_for("get_defs"))
 
 
+@app.route("/browse/")
+def browse():
+    browse = list(mongo.db.categories.find().sort("browse_name", 1))
+    return render_template("browse.html", categories=browse)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

@@ -1,4 +1,6 @@
 import os
+# import wikipedia
+# from django.http import HttpResponse
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -23,6 +25,13 @@ mongo = PyMongo(app)
 def get_defs():
     tasks = mongo.db.tasks.find()
     return render_template("home.html", tasks=tasks)
+
+
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    tasks = list(mongo.db.tasks.find({"$text": {"$search": query}}))
+    return render_template("search.html", tasks=tasks)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -139,13 +148,8 @@ def delete_word(task_id):
     return redirect(url_for("get_defs"))
 
 
-@app.route("/browse/")
-def browse():
-    browse = list(mongo.db.categories.find().sort("browse_name", 1))
-    return render_template("browse.html", categories=browse)
-
-
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
+

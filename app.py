@@ -123,13 +123,20 @@ def edit_word(task_id):
             "task_description": request.form.get("task_description"),
             "created_by": session["user"]
         }
-
         mongo.db.tasks.update({"_id": ObjectId(task_id)}, submit)
         flash("Word Successfully Edited!")
+        return redirect(url_for("get_defs"))
 
-    task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)}, submit)
+    task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_word.html", task=task, categories=categories)
+
+
+@app.route("/delete_word/<task_id>")
+def delete_word(task_id):
+    mongo.db.tasks.remove({"_id": ObjectId(task_id)})
+    flash("Word Deleted")
+    return redirect(url_for("get_defs"))
 
 
 if __name__ == "__main__":

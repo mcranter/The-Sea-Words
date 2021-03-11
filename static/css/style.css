@@ -40,3 +40,8 @@ body {
 .card-title {
     margin:5px;
 }
+
+/* base template header icon */
+#wheel {
+    margin-left:10px;
+}

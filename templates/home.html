@@ -7,7 +7,7 @@
                 <span class="card-title activator grey-text text-darken-4">{{ task.task_word }}
                 {% if session.user %}
                     <a href="" class="btn small red"><i class="fas fa-trash"></i></a>
-                    <a href="" class="btn small green"><i class="fas fa-pen"></i></a>
+                    <a href="{{ url_for('edit_word', task_id=task._id)}}" class="btn small green"><i class="fas fa-pen"></i></a>
                 {% endif %}    
                 </span>
                 <p><em>added by: {{ task.created_by }}</em></p>

@@ -116,8 +116,18 @@ def add_word():
 
 @app.route("/edit_word/<task_id>", methods=["GET", "POST"])
 def edit_word(task_id):
-    task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)})
+    if request.method == "POST":
+        submit = {
+            "task_word": request.form.get("task_word"),
+            "task_name": request.form.get("task_name"),
+            "task_description": request.form.get("task_description"),
+            "created_by": session["user"]
+        }
 
+        mongo.db.tasks.update({"_id": ObjectId(task_id)}, submit)
+        flash("Word Successfully Edited!")
+
+    task = mongo.db.tasks.find_one({"_id": ObjectId(task_id)}, submit)
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_word.html", task=task, categories=categories)
 

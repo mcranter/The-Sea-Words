@@ -23,7 +23,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_defs")
 def get_defs():
-    tasks = mongo.db.tasks.find()
+    tasks = list(mongo.db.tasks.find())
     return render_template("home.html", tasks=tasks)
 
 
@@ -31,7 +31,7 @@ def get_defs():
 def search():
     query = request.form.get("query")
     tasks = list(mongo.db.tasks.find({"$text": {"$search": query}}))
-    return render_template("search.html", tasks=tasks)
+    return render_template("home.html", tasks=tasks)
 
 
 @app.route("/register", methods=["GET", "POST"])

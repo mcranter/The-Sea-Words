@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
@@ -26,10 +27,10 @@
                 <li><a href="{{ url_for('add_word') }}">Add Word</a></li>
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                <li><a href="{{ url_for('search') }}">Search</a></li>
+                <li><a href="{{ url_for('randoms') }}">Random</a></li>
             {% else %}
                 <li><a href="{{ url_for('get_defs') }}">Home</a></li>
-                <li><a href="{{ url_for('search') }}">Search</a></li>
+                <li><a href="{{ url_for('randoms') }}">Random</a></li>
                 <li><a href="{{ url_for('login') }}">Log In</a></li>
                 <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %} 
@@ -43,10 +44,10 @@
                 <li><a href="{{ url_for('add_word') }}">Add Word</a></li>
                 <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                <li><a href="{{ url_for('search') }}">Search</a></li>
+                <li><a href="{{ url_for('randoms') }}">Random</a></li>
             {% else %}
                 <li><a href="{{ url_for('get_defs') }}">Home</a></li>
-                <li><a href="{{ url_for('search') }}">Browse</a></li>
+                <li><a href="{{ url_for('randoms') }}">Random</a></li>
                 <li><a href="{{ url_for('login') }}">Log In</a></li>
                 <li><a href="{{ url_for('register') }}">Register</a></li> 
             {% endif %}               

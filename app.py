@@ -1,6 +1,5 @@
 import os
-# import wikipedia
-# from django.http import HttpResponse
+import random
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -32,6 +31,13 @@ def search():
     query = request.form.get("query")
     tasks = list(mongo.db.tasks.find({"$text": {"$search": query}}))
     return render_template("home.html", tasks=tasks)
+
+
+@app.route("/random", methods=["GET", "POST"])
+def randoms():
+    tasks = mongo.db.tasks.find_one()
+    if random.choice(tasks) > 0:
+        return render_template("random.html", tasks=tasks)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -102,8 +108,8 @@ def profile(username):
 @app.route("/logout")
 def logout():
     # remove user from session cookies
-    flash("You're logged out, ye lubber")
     session.clear()
+    flash("You're logged out, ye lubber")
     return redirect(url_for("login"))
 
 
@@ -152,4 +158,3 @@ if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
-

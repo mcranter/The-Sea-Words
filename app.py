@@ -35,9 +35,9 @@ def search():
 
 @app.route("/random", methods=["GET", "POST"])
 def randoms():
-    tasks = mongo.db.tasks.find_one()
-    if random.choice(tasks) > 0:
-        return render_template("random.html", tasks=tasks)
+    # Get a single record using MongoDB's sample method
+    task = list(mongo.db.tasks.aggregate([{'$sample': {'size': 1}}]))[0]
+    return render_template("random.html", task=task)
 
 
 @app.route("/register", methods=["GET", "POST"])

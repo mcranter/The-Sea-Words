@@ -1,29 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="#ffffff center-align">Search</h3>
+    <h4 class="center-align search">Search for nautical terms from the golden Age of Sail (1571–1862)</h4>
 
     <div class="row card-panel grey lighten-5">
         <form action="{{ url_for('search') }}" method="POST" class="col s12">
             <div class="row valign-wrapper center-align">
                 <div class="input-field col s12 m8">
-                    <i class="fas fa-search prefix light-blue text-darken-4"></i>
+                    <i class="fas fa-search fa-xs prefix"></i>
                     <input type="text" name="query" id="query" minlength="3" class="validate" required>
                     <label for="query">Search Terms</label>
                 </div>
                 <div class="col s12 m4">
                         <a href="{{ url_for('get_defs') }}" class="red btn text-shadow">Reset</a>
                     <button type="submit" class="light-blue darken-1 btn text-shadow">
-                        <i class="fas fa-search left"></i>Search
+                        <i class="fas fa-search fa-sm left"></i>Search
                     </button>
                 </div>
             </div>
         </form>
     </div>
     
+    <h4 class="center-align search">Recently Added</h4>
+
         {% if tasks|length > 0 %}
         {% for task in tasks %}
-        <div class="card">
+        <div class="card recent">
             <!-- Checks if user is logged in, offers options based on login status -->
             
             <div class="card-content btnz">
@@ -39,13 +41,13 @@
                     <a href="{{ url_for('edit_word', task_id=task._id)}}" class="btn small green"><i class="fas fa-pen fa-sm"></i></a>
                 {% endif %}
                 </span>
-                
-                <p><em>added by: {{ task.created_by }}</em></p>
+                <!-- 'added by' text -->
+                <p id="created"><em>added by: {{ task.created_by }}</em></p>
                 
             </div>
             <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">{{ task.task_name }}
-                    <i class="material-icons right">X</i></span>
+                    <i class="fas fa-times right"></i></span>
                 <p>{{ task.task_description }}</p>
             </div>
         </div>

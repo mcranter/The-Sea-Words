@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="#ffffff center-align">Add a Term</h3>
+    <h3 class="center-align term">Add a Term <i class="fas fa-feather"></i></h3>
 
     <div class="row card-panel amber lighten-4">
         <form class="col s12" method="POST" action="{{ url_for('add_word') }}">
             <!--word input-->
             <div class="row">
                 <div class="input-field col s12">
-                    <input placeholder="Word" name="task_word" id="task_word" type="text" 
+                    <input name="task_word" id="task_word" type="text" 
                         class="validate" minlenth="2" maxlength="25" required>
-                    <label for="task_word">Term <i class="fas fa-feather"></i></label>
+                    <label for="task_word">Term </label>
                 </div>
             </div>
         

@@ -65,6 +65,10 @@ body {
     color:white;
 }
 
+.edit {
+    color: white;
+}
+
 /* base template header icon */
 #wheel {
     margin-left:10px;

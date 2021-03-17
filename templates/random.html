@@ -1,24 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
-    
-    
-    <div class="row center-align rand">
-        <div class="col s12 m8">
-            <div class="card" id="rotate">
-                <div class="card-image">
-                    <img src="https://www.ohpri.org/wp-content/gallery/the-ship/DSCN0284-v2.jpg" >
-                    <span class="card-title">{{ task.task_word }}</span>
+    <div class="container valign-wrapper rand">
+        <div class="row align-center">
+            <div class="col s12 m8 l10">
+                <div class="card" id="rotate">
+                    <div class="card-image">
+                        <img src="https://www.ohpri.org/wp-content/gallery/the-ship/DSCN0284-v2.jpg" >
+                        <span class="card-title">{{ task.task_word }}</span>
                     </div>
                     <div class="card-content">
-                    <p>{{ task.task_name }}</p>
+                        <p>{{ task.task_name }}</p>
                     </div>
                     <div class="card-action">
-                    <p>{{ task.task_description }}</p>
+                        <p>{{ task.task_description }}</p>
                     </div>
+                </div>
             </div>
         </div>
-    </div>
-
-
+</div>
 
 {% endblock %}

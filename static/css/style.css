@@ -35,7 +35,7 @@ body {
      color: black;
    }
 
-#sub-btn {
+#sub-btn, #searchbtn {
     font-family: 'Bodoni Moda', serif;
     color: white;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5)
@@ -80,3 +80,47 @@ body {
     padding-top: 100px;
     padding-bottom: 100px;
 }
+
+
+.label {
+    text-shadow: 0;
+}
+
+/* login page text */
+#logintxt, .bg-img, .new {
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5)
+}
+
+/* media queries */
+@media only screen and (max-width: 360px) {
+a.brand-logo {
+    font-size: 20px;
+}
+
+#wheel {
+   padding-top: 20px;
+   font-size: 15px;
+}
+
+#resetbtn {
+    width:100%;
+}
+
+/* random page */
+.rand {
+    padding-left: 0px;
+}
+
+/* .fa { 
+    font-size: 5; 
+} */
+
+/* side navigation */
+.li {
+    font-family: 'Bodoni Moda', serif;
+    font-size: 45px;
+    color: black;
+}
+}
+

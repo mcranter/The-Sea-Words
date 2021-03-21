@@ -1,5 +1,4 @@
 import os
-import random
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -60,7 +59,7 @@ def register():
         # put the new user into session cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful - Welcome Aboard!")
-        return redirect(url_for("profile", username=session["user"]))
+        return redirect(url_for("get_defs", username=session["user"]))
     return render_template("register.html")
 
 
@@ -79,7 +78,7 @@ def login():
                 flash("Welcome, {}".format(
                     request.form.get("username")))
                 return redirect(url_for(
-                    "profile", username=session["user"]))
+                    "get_defs", username=session["user"]))
             else:
                 # passwords don't match
                 flash("Incorrect Username and/or Password")
@@ -93,16 +92,16 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/profile/<username>", methods=["GET", "POST"])
-def profile(username):
-    # gets session user username from db
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+# @app.route("/profile/<username>", methods=["GET", "POST"])
+# def profile(username):
+#     # gets session user username from db
+#     username = mongo.db.users.find_one(
+#         {"username": session["user"]})["username"]
 
-    if session["user"]:
-        return render_template("profile.html", username=username)
+#     if session["user"]:
+#         return render_template("profile.html", username=username)
 
-    return redirect(url_for("login"))
+#     return redirect(url_for("login"))
 
 
 @app.route("/logout")

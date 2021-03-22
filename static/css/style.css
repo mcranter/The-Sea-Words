@@ -92,7 +92,12 @@ body {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5)
 }
 
-/* media queries */
+
+
+
+
+/* media queries - MotoG4, Galaxy S5 */
+
 @media only screen and (max-width: 360px) {
 a.brand-logo {
     font-size: 20px;
@@ -124,9 +129,6 @@ a.brand-logo {
     padding-left: 0px;
 }
 
-/* .fa { 
-    font-size: 5; 
-} */
 
 /* side navigation */
 .li {
@@ -139,5 +141,83 @@ a.brand-logo {
     font-size: 15px;
 }
 
+/* add word page */
+#sub-btn {
+    width:50%;
+    font-size: 15px;
+}
+}
+/* media query Pixel 2, Pixel 2XL */
+@media only screen and (max-width: 411px) {
+a.brand-logo {
+    font-size: 20px;
 }
 
+#wheel {
+   font-size: 15px;
+   padding-top: 20px;
+}
+
+#submitbtn {
+    justify-content: center;
+    width:80%;
+    font-size: 10px;
+    font-family: 'Bodoni Moda', serif;
+}
+
+#resetbtn, .def {
+    width:80%;
+    font-size: 10px;
+    font-family: 'Bodoni Moda', serif;
+}
+
+/* random page */
+.rand {
+    padding-left: 0;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+}
+/* media queries iphone5 */
+
+@media only screen and (max-width: 320px) {
+a.brand-logo {
+    font-size: 17px;
+}
+
+#wheel {
+   padding-top: 20px;
+   font-size: 10px;
+}
+
+#submitbtn {
+    font-size: 0px;
+
+}
+}
+/* media query: galaxy fold */
+@media only screen and (max-width: 280px) {
+a.brand-logo {
+    font-size: 15px;
+}
+
+#wheel {
+   padding-top: 20px;
+   font-size: 10px;
+}
+
+#submitbtn {
+    font-size: 0px;
+
+}
+
+#sub-btn {
+    width: 70%;
+    font-size: 15px;
+}
+
+.cnbtn {
+    width: 70%;
+    font-size: 15px;
+}
+}

@@ -99,9 +99,6 @@ body {
 }
 
 
-
-
-
 /* media query surface duo */
 @media only screen and (max-width: 540px) {
     a.brand-logo {
@@ -109,8 +106,8 @@ body {
     }
 
     #wheel {
-    font-size: 20px;
-    padding-top: 20px;
+        font-size: 20px;
+        padding-top: 20px;
     }
 
     #resetbtn, #submitbtn {
@@ -238,6 +235,10 @@ body {
     #sub-btn {
         width:50%;
         font-size: 15px;
+    }
+
+    .sidenav li>a {
+        font-size: 20px;
     }
 }
 

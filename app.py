@@ -92,18 +92,6 @@ def login():
     return render_template("login.html")
 
 
-# @app.route("/profile/<username>", methods=["GET", "POST"])
-# def profile(username):
-#     # gets session user username from db
-#     username = mongo.db.users.find_one(
-#         {"username": session["user"]})["username"]
-
-#     if session["user"]:
-#         return render_template("profile.html", username=username)
-
-#     return redirect(url_for("login"))
-
-
 @app.route("/logout")
 def logout():
     # remove user from session cookies
@@ -114,6 +102,9 @@ def logout():
 
 @app.route("/add_word", methods=["GET", "POST"])
 def add_word():
+    if not session.get("user"):
+        return render_template("404.html")
+
     if request.method == "POST":
         task = {
             "task_word": request.form.get("task_word"),

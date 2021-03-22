@@ -78,7 +78,7 @@ body {
 .rand {
     padding-left: 100px;
     padding-top: 100px;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
 }
 
 #randbtn {
@@ -100,56 +100,7 @@ body {
 
 
 
-/* media queries - MotoG4, Galaxy S5 */
-@media only screen and (max-width: 360px) {
-    a.brand-logo {
-        font-size: 20px;
-    }
 
-    #wheel {
-    padding-top: 20px;
-    font-size: 15px;
-    }
-
-    #resetbtn, .def {
-        width:75%;
-        font-size: 10px;
-        font-family: 'Bodoni Moda', serif;
-    }
-
-    #submitbtn {
-        font-size: 0px;
-        justify-content: center;
-        width:75%;
-    }
-
-    .fa-search {
-        font-size: 10px;
-    }
-
-    /* random page */
-    .rand {
-        padding-left: 0px;
-    }
-
-
-    /* side navigation */
-    .li {
-        font-family: 'Bodoni Moda', serif;
-        font-size: 45px;
-        color: black;
-    }
-
-    .fa-search{
-        font-size: 15px;
-    }
-
-    /* add word page */
-    #sub-btn {
-        width:50%;
-        font-size: 15px;
-    }
-}
 
 /* media query surface duo */
 @media only screen and (max-width: 540px) {
@@ -198,11 +149,14 @@ body {
         font-family: 'Bodoni Moda', serif;
     }
 
+    #srchbtn {
+        font-size: 14px;
+    }
+
     /* random page */
     .rand {
         padding-left: 0;
-        padding-top: 100px;
-        padding-bottom: 50px;
+        padding-top: 50px;
     }
 }
 
@@ -230,6 +184,63 @@ body {
 
 }
 
+/* media queries - MotoG4, Galaxy S5 */
+@media only screen and (max-width: 360px) {
+    a.brand-logo {
+        font-size: 20px;
+    }
+
+    #wheel {
+        padding-top: 20px;
+        font-size: 15px;
+    }
+
+    #resetbtn, .def {
+        width:75%;
+        font-size: 13px;
+        font-family: 'Bodoni Moda', serif;
+    }
+
+    #submitbtn {
+        font-size: 0px;
+        justify-content: center;
+        width:75%;
+    }
+
+    .fa-search {
+        font-size: 10px;
+    }
+    
+    #xbtn {
+        font-size: 13px;
+    }
+
+    /* random page */
+    .rand {
+        padding-left: 0px;
+        padding-top:0px;
+        padding-bottom:0px;
+    }
+
+
+    /* side navigation */
+    .li {
+        font-family: 'Bodoni Moda', serif;
+        font-size: 45px;
+        color: black;
+    }
+
+    .fa-search{
+        font-size: 15px;
+    }
+
+    /* add word page */
+    #sub-btn {
+        width:50%;
+        font-size: 15px;
+    }
+}
+
 @media only screen and (max-width: 320px) {
     a.brand-logo {
         font-size: 17px;
@@ -247,6 +258,10 @@ body {
     #sub-btn, .cnbtn {
         width: 66%
 
+    }
+
+    #xtbn {
+        font-size: 10px;
     }
 
 }
@@ -278,6 +293,11 @@ body {
     }
     #titlenav {
         padding: 0px;
+    }
+
+    .rand {
+        padding-bottom:0px;
+        padding:0px;
     }
 
 }

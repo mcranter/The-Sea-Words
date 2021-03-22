@@ -121,6 +121,9 @@ def add_word():
 
 @app.route("/edit_word/<task_id>", methods=["GET", "POST"])
 def edit_word(task_id):
+    if not session.get("user"):
+        return render_template("404.html")
+
     if request.method == "POST":
         submit = {
             "task_word": request.form.get("task_word"),

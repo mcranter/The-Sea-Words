@@ -74,11 +74,17 @@ body {
     margin-left:10px;
     color:white;
 }
-
+/* random page */
 .rand {
     padding-left: 100px;
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
+}
+
+#randbtn {
+    padding-top:0;
+    padding-right:0;
+    padding-bottom:100px;
 }
 
 
@@ -94,130 +100,184 @@ body {
 
 
 
-
-
 /* media queries - MotoG4, Galaxy S5 */
-
 @media only screen and (max-width: 360px) {
-a.brand-logo {
+    a.brand-logo {
+        font-size: 20px;
+    }
+
+    #wheel {
+    padding-top: 20px;
+    font-size: 15px;
+    }
+
+    #resetbtn, .def {
+        width:75%;
+        font-size: 10px;
+        font-family: 'Bodoni Moda', serif;
+    }
+
+    #submitbtn {
+        font-size: 0px;
+        justify-content: center;
+        width:75%;
+    }
+
+    .fa-search {
+        font-size: 10px;
+    }
+
+    /* random page */
+    .rand {
+        padding-left: 0px;
+    }
+
+
+    /* side navigation */
+    .li {
+        font-family: 'Bodoni Moda', serif;
+        font-size: 45px;
+        color: black;
+    }
+
+    .fa-search{
+        font-size: 15px;
+    }
+
+    /* add word page */
+    #sub-btn {
+        width:50%;
+        font-size: 15px;
+    }
+}
+
+/* media query surface duo */
+@media only screen and (max-width: 540px) {
+    a.brand-logo {
+        font-size: 25px;
+    }
+
+    #wheel {
     font-size: 20px;
+    padding-top: 20px;
+    }
+
+    #resetbtn, #submitbtn {
+        font-family: 'Bodoni Moda', serif;
+        width:70%
+    }
+
+    /* random page */
+    .rand {
+        padding: 0px;
+        padding-top:50px;
+    }
 }
 
-#wheel {
-   padding-top: 20px;
-   font-size: 15px;
-}
-
-#resetbtn, .def {
-    width:75%;
-    font-size: 10px;
-    font-family: 'Bodoni Moda', serif;
-}
-
-#submitbtn {
-    font-size: 0px;
-    justify-content: center;
-    width:75%;
-}
-
-.fa-search {
-    font-size: 10px;
-}
-
-/* random page */
-.rand {
-    padding-left: 0px;
-}
-
-
-/* side navigation */
-.li {
-    font-family: 'Bodoni Moda', serif;
-    font-size: 45px;
-    color: black;
-}
-
-.fa-search{
-    font-size: 15px;
-}
-
-/* add word page */
-#sub-btn {
-    width:50%;
-    font-size: 15px;
-}
-}
 /* media query Pixel 2, Pixel 2XL */
-@media only screen and (max-width: 411px) {
-a.brand-logo {
-    font-size: 20px;
+@media only screen and (max-width: 414px) {
+    a.brand-logo {
+        font-size: 20px;
+    }
+
+    #wheel {
+        font-size: 15px;
+        padding-top: 20px;
+    }
+
+    #submitbtn {
+        justify-content: center;
+        width:80%;
+        font-size: 10px;
+        font-family: 'Bodoni Moda', serif;
+    }
+
+    #resetbtn, .def {
+        width:80%;
+        font-size: 10px;
+        font-family: 'Bodoni Moda', serif;
+    }
+
+    /* random page */
+    .rand {
+        padding-left: 0;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
 }
 
-#wheel {
-   font-size: 15px;
-   padding-top: 20px;
-}
+/* media query: iphone 6/7/8 */
+@media only screen and (max-width: 375px) {
+    a.brand-logo {
+        font-size: 20px;
+    }
 
-#submitbtn {
-    justify-content: center;
-    width:80%;
-    font-size: 10px;
-    font-family: 'Bodoni Moda', serif;
-}
+    #wheel {
+        font-size: 15px;
+        padding-top: 20px;
+    }
 
-#resetbtn, .def {
-    width:80%;
-    font-size: 10px;
-    font-family: 'Bodoni Moda', serif;
-}
+    #submitbtn {
+        justify-content: center;
+        width:80%;
+        font-size: 8px;
+        font-family: 'Bodoni Moda', serif;
+    }
 
-/* random page */
-.rand {
-    padding-left: 0;
-    padding-top: 100px;
-    padding-bottom: 50px;
+    #srchbtn {
+        font-size: 10px;
+    }
+
 }
-}
-/* media queries iphone5 */
 
 @media only screen and (max-width: 320px) {
-a.brand-logo {
-    font-size: 17px;
+    a.brand-logo {
+        font-size: 17px;
+    }
+
+    #wheel {
+        padding-top: 20px;
+        font-size: 15px;
+    }
+
+    #submitbtn {
+        font-size: 0px;
+
+    }
+    #sub-btn, .cnbtn {
+        width: 66%
+
+    }
+
 }
 
-#wheel {
-   padding-top: 20px;
-   font-size: 10px;
-}
-
-#submitbtn {
-    font-size: 0px;
-
-}
-}
 /* media query: galaxy fold */
 @media only screen and (max-width: 280px) {
-a.brand-logo {
-    font-size: 15px;
-}
+    a.brand-logo {
+        font-size: 15px;
+    }
 
-#wheel {
-   padding-top: 20px;
-   font-size: 10px;
-}
+    #wheel {
+        padding-top: 20px;
+        font-size: 10px;
+    }
 
-#submitbtn {
-    font-size: 0px;
+    #submitbtn {
+        font-size: 0px;
 
-}
+    }
 
-#sub-btn {
-    width: 70%;
-    font-size: 15px;
-}
+    #sub-btn {
+        width: 70%;
+        font-size: 15px;
+    }
 
-.cnbtn {
-    width: 70%;
-    font-size: 15px;
-}
+    .cnbtn {
+        width: 70%;
+        font-size: 15px;
+    }
+    #titlenav {
+        padding: 0px;
+    }
+
 }

@@ -37,17 +37,17 @@
             </div>
         </nav>
     <!--navbar, mobile-->
-        <ul class="sidenav center-align" id="mobile-demo">
-            <li><h4 class="light-blue-text text-darken-4" id="titlenav">The Sea Words</h4></li>
+        <ul class="sidenav center-align adwrd" id="mobile-demo">
+            <li><a href="{{ url_for('get_defs') }}"><h4 class="light-blue-text text-darken-4" id="titlenav">The Sea Words</h4></a></li>
             {% if session.user %}
-                <li><a href="{{ url_for('add_word') }}">Add Word</a></li>
-                <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                <li><a href="{{ url_for('randoms') }}">Random</a></li>
+                <li><a href="{{ url_for('add_word') }}" class="adwrd">Add Word</a></li>
+                <li><a href="{{ url_for('logout') }}" class="adwrd">Log Out</a></li>
+                <li><a href="{{ url_for('randoms') }}" class="adwrd">Random</a></li>
             {% else %}
-                <li><a href="{{ url_for('get_defs') }}">Home</a></li>
-                <li><a href="{{ url_for('randoms') }}">Random</a></li>
-                <li><a href="{{ url_for('login') }}">Log In</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li> 
+                <li><a href="{{ url_for('get_defs') }}" class="adwrd">Home</a></li>
+                <li><a href="{{ url_for('randoms') }}" class="adwrd">Random</a></li>
+                <li><a href="{{ url_for('login') }}" class="adwrd">Log In</a></li>
+                <li><a href="{{ url_for('register') }}" class="adwrd"> Register</a></li> 
             {% endif %}               
         </ul>
     </header>

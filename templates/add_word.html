@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <input name="task_word" id="task_word" type="text" 
-                        class="validate" minlenth="2" maxlength="25" required>
+                        class="validate" minlenth="2" maxlength="25" required pattern="^[A-Za-z]{2,25}$">
                     <label for="task_word">Term </label>
                 </div>
             </div>
@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <textarea id="task_name" name="task_name" class="materialize-textarea validate" 
-                        maxlength="300" minlenth="10" required></textarea>
+                        maxlength="300" minlenth="10" required pattern="^[A-Za-z]{10,300}$"></textarea>
                     <label for="task_name" >Add definition here</label>
                 </div>  
             </div>
@@ -27,7 +27,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <textarea id="task_description" name="task_description" class="materialize-textarea validate" 
-                        minlenth="10" maxlength="200" required></textarea>
+                        minlenth="10" maxlength="200" required pattern="^[a-zA-Z]${}"></textarea>
                     <label for="task_description">Use it in a sentence</label>
                 </div>               
             </div>

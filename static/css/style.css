@@ -87,6 +87,10 @@ body {
     padding-bottom:100px;
 }
 
+.white {
+    color:white;
+}
+
 
 .label {
     text-shadow: 0;
@@ -99,8 +103,32 @@ body {
 }
 
 
+@media only screen and (max-width: 1024px){
+    /* random page */
+    .rand {
+        width:100%;
+    }
+
+    #resetbtn {
+        width:61%;
+    }
+
+}
+@media only screen and (max-width: 768px){
+    #resetbtn {
+        width: 69%;
+}
+      /* random page */
+    .rand {
+        padding: 0px;
+        padding-top:50px;
+        padding-left:175px;
+        width:100%;
+    }
+
+}
 /* media query surface duo */
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 542px) {
     a.brand-logo {
         font-size: 25px;
     }
@@ -277,7 +305,7 @@ body {
         padding-top: 20px;
         font-size: 10px;
     }
-
+    
     #submitbtn {
         font-size: 0px;
 
@@ -298,6 +326,11 @@ body {
 
     .rand {
         padding-bottom:0px;
+        padding:0px;
+        padding-top:50px;
+    }
+
+    #randbtn {
         padding:0px;
     }
 

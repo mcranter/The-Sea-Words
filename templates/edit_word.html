@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <input placeholder="Word" name="task_word" id="task_word" type="text" 
-                        value="{{ task.task_word }}" class="validate" minlenth="2" maxlength="25" required>
+                        value="{{ task.task_word }}" class="validate" minlength="2" maxlength="25" required>
                     <label for="task_word"><i class="fas fa-feather"></i></label>
                 </div>
             </div>
@@ -18,7 +18,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <textarea id="task_name" name="task_name" class="materialize-textarea validate" 
-                        maxlength="300" minlenth="10" required>
+                        maxlength="300" minlength="10" required>
                         {{- task.task_name -}}
                     </textarea>
                     <label for="task_name" >Add definition here</label>
@@ -29,7 +29,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <textarea id="task_description" name="task_description" class="materialize-textarea validate" 
-                        minlenth="10" maxlength="200" required>
+                        minlength="10" maxlength="200" required>
                         {{- task.task_description -}}
                 </textarea>
                     <label for="task_description">Use it in a sentence</label>

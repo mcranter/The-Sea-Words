@@ -1,13 +1,10 @@
 # The Sea Words
 
 Ahoy sailor! The Sea Words is a website where you can search, add and even edit nautical terms.
-
+![](images/mock1.jpg)
 
 ### UX
  
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
-
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
 ### First Time User
 - As a first time user, I want the function of the site to be obvious.
 - As a first time user, I want to be able to search.
@@ -41,65 +38,110 @@ In particular, as part of this section we recommend that you provide a list of U
 
 
 ## Features
-
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
  
 ### Existing Features
-- Feature 1 - allows users X to achieve Y, by having them fill out Z
-- ...
+- Editing capabilities: All logged in users can edit terms.
+- Only the original author can delete their post.
+- Random term generator: generates a random term at the click of a button.
+- Login/ Register: ability to sign up or in, in order to add terms.
 
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 ### Features Left to Implement
-- Browse by Letter feature
-- Last Updated tag
+- Browse by Letter feature: this will enable a more orderly perusal of terms. 
+- Last Updated tag: this feature would allow readers to see when and by whom a listing was last edited/added.
+
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
+#### Languages:
+- [HTML5](https://en.wikipedia.org/wiki/HTML5) 
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [jQuery](https://jquery.com/)
+- [Python](https://www.python.org/)
 
-- [HTML](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
+#### Frameworks & Libraries:
+- [Gitpod](https://www.gitpod.io/) 
+- [GitHub](https://github.com/)
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+- [Google Fonts](https://fonts.google.com/)
+- [Materialize](https://materializecss.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [Heroku](https://dashboard.heroku.com/)
+- [Jinja](https://jinja.palletsprojects.com/en/2.11.x/)
 
-- [CSS](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
+## Testing - User Stories
+### New User
+- "As a first time user, I want the function of the site to be obvious."
+    1. Text announces purpose of the site upon entry.  
+- "As a first time user, I want to be able to search."
+    1. Homepage contains a search function.
+- "As a first time user, I want the process whereby I can add my own entry to be obvious."
+    1. Navbar contains option to add new word when logged in.
+- "As a first time user, I want the option to sign up and add my own listing." 
+    1. Easy register option provides the opportunity to sign up quickly.
 
-- [Javascript](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
+ ### Regular User
+- "As a regular user, I want to option to edit any entry I see as inaccurate."
+    1. The option to edit any listing is available once logged in.
+- "As a regular user, I want assurance that my enteries cannot be deleted by bad actors."
+    1. Only the original author and the Admin have the power to delete a listing.
+- "As a regular user, I want the abilty to search for entries."
+    1. There is a search function clearly visible at the top of the home page.
+- "As a regular user, I want the ability to see whom entries have been added by."
+    1. The post's author appears on each entry.
+- "As a regular user, I want it to be immediately obvious upon visiting the site whether I am logged in or not."
+    2. Only logged in visitor can see the edit/delete option, or the Add Word/Logout navbar item.
+   
 
-- [JQuery](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
-
-- [Flask](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
-
-- [Django](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
-
-- [MongoDb](https://jquery.com)
-    - The project uses **JQuery** to simplify DOM manipulation.
-
-## Testing
-
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
-
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
+## Testing - Functionality
 1. Search function:
     1. Go to the Home page
     2. Try to submit the empty search and verify that an error message about the required fields appears
     3. Try to submit the search with less than 3 letters verify that a relevant error message appears
     4. Try to submit the search with all inputs valid and verify that a success message appears.
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+2. Login Page:
+    1. Try to submit incorrect login details and verify an error appears.
 
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+3. Register Page
+    1. Try to register using an existing username and verify error appears
+    2. Try to register a username using fewer than 3 letters and verify error appears. 
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+4. Add/ Edit Word Page: 
+    1. Attempt to enter a term with fewer than 3 letters and verify error appears.
+    2. Attempt to enter fewer than 10 letters, or more than 300 in the description field and verify error appears.
+    3. Attempt to enter fewer than 10 letters, or more than 200 in the use in a sentence field and verify that an error appears. 
+
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
+
+-   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) -
+Results
+1. 404 ![](/images/validation/404.png)
+2. add word ![](/images/validation/add.png)
+3. base ![](images/validation/base.png)
+4. edit_word ![](images/validation/edit_word.png)
+4. home ![](images/validation/home.png)
+4. login ![](images/validation/login.png)
+4. random ![](images/validation/random.png)
+4. register ![](images/validation/register.png)
+
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - Results
+1.  CSS ![](images/validation/css.png)
+
+-   [PEP8](http://pep8online.com/) - Results
+1.  Python Checker ![](images/validation/pep.png)
+
+-   [JS](http://pep8online.com/) - Results
+1.  Javascript checker ![](images/validation/jshint.png)
+
+
+This site has been tested as working on the following browsers: Chrome/Firefox/Safari and also tested using Chrome Dev tools on the following Mobile devices: Moto4, Galaxy s5/Fold, iPhone:5, SE, 6,7,8 Plus, X; Surface Tablet, iPad, iPad Pro. 
+
+
+
+
+## Bugs
+1. Resolved issue: old data related to incorrect password pattern continued to show in Chrome Dev tools despite being reloaded, cache cleared and viewed in Incognito. This issue was resolved by stopping and restarting by server, on advice from Code Institute mentor.
 
 ## Deployment
 
@@ -130,17 +172,61 @@ $ git clone https://github.com/mcranter/Milestone3
 Click [here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
 
-In addition, if it is not obvious, you should also describe how to run your code locally.
+#### Working with the local copy
+1. Install all the requirements: Go to the workspace of your local copy. In the terminal window of your IDE type: **pip3 install -r requirements.txt**.
+2. Create a database in MongoDB  
+    - Signup or login to your MongoDB account.
+    - Create a cluster and a database.
+    - Create one collections in the db: Terms
+    3. Create the environment variables 
+    - Create a .gitignore file in the root directory of the project.
+    - Add the env.py file in the .gitignore.
+    - Create the file env.py. This  will contain all the envornment variables.
+    ```
+    Import os
+    os.environ.setdefault("IP", "Added by developer")
+    os.environ.setdefault("PORT", "Added by developer")
+    os.environ.setdefault("SECRET_KEY", "Added by developer")
+    os.environ.setdefault("MONGO_URI", "Added by developer")
+    os.environ.setdefault("MONGO_DBNAME", "Added by developer")
+    ```
+4. Run the app: Open your terminal window and enter 'python3 app.py' to start the app.
 
+#### Heroku Deployment  
+1. Set up local workspace for Heroku 
+    - In terminal window of your IDE type: **pip3 freeze -- local > requirements.txt.** 
+    - In termial window of your IDE type: **python app.py > Procfile** 
+2. Set up Heroku: create a Heroku account and create a new app. 
+3. Deployment method 'Github'
+    - Click on the **Connect to GitHub** section in the deploy tab in Heroku. 
+        - Search your repository to connect with it.
+        - When your repository appears click on **connect** to connect your repository with the Heroku. 
+    - Go to the settings app in Heroku and go to **Config Vars**. Click on **Reveal Config Vars**.
+        - Enter the variables contained in your env.py file. it is about: **IP, PORT, SECRET_KEY, MONGO_URI, MONGO_DBNAME**
+4. Push the requirements.txt and Procfile to repository. 
+     ```
+    $ git add requirements.txt
+    $ git commit -m "Add requirements.txt"
+
+    $ git add Procfile 
+    $ git commit -m "Add Procfile"
+    ```
+5. Automatic deployment: Go to the deploy tab in Heroku and scroll down to **Automatic deployments**. Click on **Enable Automatic Deploys**. By **Manual deploy** click on **Deploy Branch**.
+
+
+## Database structure: 
+- View Categories ![](images/db/categories.jpg)
+- View Users  ![](images/db/users.jpg)
+- View Tasks ![](images/db/tasks.jpg)
 
 ## Credits
 
 ### Content
-- This site was built following available Code Institue learning materials. Specifically
+- This site was built following the available Code Institue learning materials. Specifically Tim Nelson's Mongo DB Mini Project, which was used as the basis for this project.
 
 ### Media
-- The photos used in this site were obtained from Pixabay and https://www.ohpri.org/...
+- The photos used in this site were obtained from Pixabay and [Oliver Hazard Perry, Rhode Island](https://www.ohpri.org/)
 
 ### Acknowledgements
 
-- I received inspiration for this project from X
+- I received inspiration for this project from the Aubrey/Maturin novels of Patrick O'Brien.

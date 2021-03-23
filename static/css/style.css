@@ -40,10 +40,17 @@ body {
     color: white;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5)
 }
+
+#submitbtn {
+    font-family: 'Bodoni Moda', serif;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5)
+}
+
 /* home */
-.btn small {
+.btn {
     margin: 5px;
-    size: 0.5em;
+    
 }
 
 .i {
@@ -91,10 +98,6 @@ body {
     color:white;
 }
 
-
-.label {
-    text-shadow: 0;
-}
 
 /* login page text */
 #logintxt, .bg-img, .new {
@@ -243,7 +246,7 @@ body {
     /* random page */
     .rand {
         padding-left: 0px;
-        padding-top:0px;
+        padding-top:20px;
         padding-bottom:0px;
     }
 

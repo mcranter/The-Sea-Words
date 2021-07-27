@@ -1,6 +1,6 @@
 # The Sea Words
 
-Ahoy sailor! The Sea Words is a website where you can search, add and even edit nautical terms.
+Ahoy sailor! [The Sea Words](https://the-sea-words.herokuapp.com/) is a website where you can search, add and even edit nautical terms.
 
 ![](images/mock1.jpg)
 
